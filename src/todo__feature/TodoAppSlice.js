@@ -12,13 +12,8 @@ export const TodoAppSlice = createSlice({
         text: 'First Todo item.'
     }],
     reducers: {
-        addTodo: {
-            reducer: (state, action) => {
-                state.push(action.payload)
-            },
-            prepare: (payload) => {
-                return { payload: payload }
-            }
+        addTodo: (state, action) => {
+            state.push(action.payload)
         }
     }
 });

@@ -9,7 +9,7 @@ const TodoInput = (props) => {
     return (
         <form className='todo-form' onSubmit={ (event) => {
             event.preventDefault();
-            todo && dispatch(props.todoHandler(todo))
+            todo && dispatch(props.todoHandler(todo));
         }}>
             <textarea id="todoInput" className='todo-text-area' value={todo} onChange={ (e) => { setTodo(e.target.value)}} placeholder="Add your todo items"/>
             <button type="submit" className="todo-submit" disabled={!todo}>Add Todo</button>
